@@ -25,7 +25,7 @@ const App = () => {
   };
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <CurrencyContext.Provider value={context}>
         <div className="App">
           <Header />
