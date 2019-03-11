@@ -1,6 +1,7 @@
 import React from 'react'
 import ProductSummary from '../components/ProductSummary';
 import {Link, Redirect} from 'react-router-dom';
+import Price from '../components/Price';
 
 const getSelectedProduct = (products, selectedId) => products ?
     products.find(prod => prod.id === selectedId)
@@ -24,7 +25,7 @@ const ProductPage = ({ products, selectedId }) => {
         <div>
             <h2>#{id} {name}</h2>
             <p>{description}</p>
-            <div> {price.base} {price.amount} </div>
+            <div> <Price {...price}/> </div>
         </div>
         <br/>
         <h3>Related</h3>
