@@ -1,28 +1,36 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import Header from './components/Header';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ProductsPage from './pages/ProductsPage';
+import productList from './products.json';
+import ProductPage from './pages/ProductPage';
+import NotFound from './pages/NotFound';
 
-class App extends Component {
-  render() {
-    return (
+const App = () => {
+  // Create state to hold products
+  const [products, setProducts] = useState([])
+
+  // Add products on app mount. Time to fetch data from source of truth.
+  useEffect(() => {
+    setProducts(productList)
+  }, [])
+
+  return (
+      <Router>
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header />
+        { products.length &&
+          <Switch>
+          <Route path="/" exact component={()=><ProductsPage products={products} />} />
+          <Route path="/p/:id" component={({match})=><ProductPage products={products} selectedId={+match.params.id}/>} />
+          <Route component={NotFound} />
+          </Switch>
+        }
+        
       </div>
+      </Router>
     );
   }
-}
+
 
 export default App;
