@@ -1,6 +1,7 @@
 Remember to clone the repo and install dependencies.
 
 _
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
