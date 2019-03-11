@@ -1,4 +1,5 @@
-import React from 'react'
-const CurrencyContext = React.createContext()
+import React from 'react';
 
-export default CurrencyContext
+const CurrencyContext = React.createContext();
+
+export default CurrencyContext;
