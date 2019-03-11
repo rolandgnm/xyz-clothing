@@ -43,7 +43,10 @@ const ProductPage = ({ products, selectedId }) => {
       <h3>Related</h3>
       <div>
         {relatedProducts.map(relatedProduct => (
-          <ProductSummary key={relatedProduct.id} {...relatedProduct} />
+          <>
+            <br />
+            <ProductSummary key={relatedProduct.id} {...relatedProduct} />
+          </>
         ))}
       </div>
     </div>

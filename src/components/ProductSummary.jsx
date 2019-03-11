@@ -4,13 +4,13 @@ import Price from './Price';
 
 const ProductSummary = ({ id, name, price }) => (
   <Link to={`/p/${id}`}>
-    <div>
+    <span>
       <span>{name}</span>
       {' '}
       -
       {' '}
       <Price {...price} />
-    </div>
+    </span>
   </Link>
 );
 export default ProductSummary;
