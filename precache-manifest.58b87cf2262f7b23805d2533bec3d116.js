@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "d76f1fbb74b44cd077b6",
+    "revision": "13cc6b2ebc08d5102c29",
     "url": "/xyz-clothing/static/css/main.0495c808.chunk.css"
   },
   {
-    "revision": "d76f1fbb74b44cd077b6",
-    "url": "/xyz-clothing/static/js/main.0df06420.chunk.js"
+    "revision": "13cc6b2ebc08d5102c29",
+    "url": "/xyz-clothing/static/js/main.ea4a8850.chunk.js"
   },
   {
     "revision": "0e837e9f64f41ef1f182",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/xyz-clothing/static/js/2.1dbc91e8.chunk.js"
   },
   {
-    "revision": "04d5805e0e25f02985db095ea45d6ffd",
+    "revision": "810d719db77c87c0f9d5179bcf7d9936",
     "url": "/xyz-clothing/index.html"
   }
 ];
