@@ -4,4 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 
-// You can delete this file if you're not using it
+import React from 'react';
+
+import { CurrencyProvider } from './src/context/CurrencyContext';
+
+export const wrapRootElement = ({ element }) => <CurrencyProvider>{element}</CurrencyProvider>;
