@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'gatsby';
 import ProductSummary from '../components/xyz/ProductSummary';
 import Price from '../components/xyz/Price';
@@ -35,10 +35,10 @@ const ProductPage = ({ pageContext: { products, selectedId } }) => {
       <h3>Related</h3>
       <div>
         {relatedProducts.map(relatedProduct => (
-          <>
+          <Fragment key={relatedProduct.id}>
             <br />
-            <ProductSummary key={relatedProduct.id} {...relatedProduct} />
-          </>
+            <ProductSummary {...relatedProduct} />
+          </Fragment>
         ))}
       </div>
     </Layout>
