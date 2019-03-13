@@ -4,18 +4,11 @@ import exchangeRates from '../data/exchange_rates.json';
 const CurrencyContext = React.createContext();
 
 const CurrencyProvider = ({ children }) => {
-  let localCurrency;
-  if (typeof window !== `undefined`) {
-    localCurrency = localStorage.getItem('currency');
-  }
-  const [currency, setCurrency] = useState(localCurrency || 'AUD');
+  const [currency, setCurrency] = useState('AUD');
 
   const context = {
     currency,
-    setCurrency: newCurrency => {
-      localStorage.setItem('currency', newCurrency);
-      setCurrency(newCurrency);
-    },
+    setCurrency,
     exchangeRates,
   };
 
