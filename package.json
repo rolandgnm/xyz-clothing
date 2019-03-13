@@ -1,12 +1,12 @@
 {
-  "name": "awesome-gatsby-starter",
+  "name": "xyz-clothing",
   "version": "1.0.1",
   "description": "A starter for GatsbyJS with a preconfigured MDX, Storybook and ESLint environment.",
   "keywords": [
     "gatsby",
     "gatsby-starter"
   ],
-  "homepage": "https://github.com/South-Paw/awesome-gatsby-starter",
+  "homepage": "https://rolandgnm.github.io/xyz-clothing",
   "bugs": "https://github.com/South-Paw/awesome-gatsby-starter/issues",
   "license": "MIT",
   "author": {
@@ -23,6 +23,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -67,6 +68,7 @@
     "eslint-plugin-prefer-object-spread": "^1.2.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
+    "gh-pages": "^2.0.1",
     "prettier": "^1.16.0",
     "react-markdown": "^4.0.6"
   }
