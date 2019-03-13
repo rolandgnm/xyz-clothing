@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ProductSummary from '../components/xyz/ProductSummary';
 
 import { Layout } from '../components/Layout';
@@ -7,10 +7,10 @@ const ProductsPage = ({ pageContext: { products } }) => (
   <Layout>
     <h1>Products</h1>
     {products.map(product => (
-      <>
+      <Fragment key={product.id}>
         <br />
-        <ProductSummary key={product.id} {...product} />
-      </>
+        <ProductSummary {...product} />
+      </Fragment>
     ))}
   </Layout>
 );
