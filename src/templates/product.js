@@ -1,8 +1,10 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
+import { Button, Icon } from 'semantic-ui-react';
 import ProductSummary from '../components/xyz/ProductSummary';
 import Price from '../components/xyz/Price';
 import { Layout } from '../components/Layout';
+import { COLOR } from '../constants';
 
 const getSelectedProduct = (products, selectedId) =>
   products ? products.find(prod => prod.id === selectedId) : undefined;
@@ -18,7 +20,12 @@ const ProductPage = ({ pageContext: { products, selectedId } }) => {
   return (
     <Layout>
       <div>
-        <Link to="/">{'<'} Products</Link>
+        <Link to="/" style={{ color: COLOR.TEXT }}>
+          <Button icon circular>
+            <Icon name="arrow left" />
+          </Button>
+          Products
+        </Link>
       </div>
       <br />
       <div>
