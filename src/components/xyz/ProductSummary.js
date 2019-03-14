@@ -33,9 +33,20 @@ const FlexPrice = styled.div`
   flex: 1;
 `;
 
+const SummaryLink = styled(Link)`
+  display: block;
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+`;
+
 const ProductSummary = ({ id, name, price }) => (
-  <Segment>
-    <Link to={`/p/${id}`}>
+  <SummaryLink to={`/p/${id}`}>
+    <Segment>
       <FlexWrapper>
         <NameIdWrapper>
           <ProductName>{name}</ProductName>
@@ -45,8 +56,8 @@ const ProductSummary = ({ id, name, price }) => (
           <Price {...price} />
         </FlexPrice>
       </FlexWrapper>
-    </Link>
-  </Segment>
+    </Segment>
+  </SummaryLink>
 );
 
 export default ProductSummary;
