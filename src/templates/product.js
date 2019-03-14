@@ -28,7 +28,7 @@ const DetailsWrapper = styled.div`
 `;
 
 const NameDescWrapper = styled.div`
-  flex: 1 0 500px;
+  flex: 2 1 500px;
   margin: 0 1em 2em 0;
 `;
 
