@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import Header from '../xyz/Header';
 import { Container } from '../Container';
+import 'semantic-ui-css/semantic.min.css';
 import { ResetStyle } from '../Reset';
 
 const Layout = ({ children }) => (

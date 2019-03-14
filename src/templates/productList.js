@@ -5,7 +5,7 @@ import { Layout } from '../components/Layout';
 
 const ProductsPage = ({ pageContext: { products } }) => (
   <Layout>
-    <h1>Products</h1>
+    <h2>Products</h2>
     {products.map(product => (
       <Fragment key={product.id}>
         <br />
