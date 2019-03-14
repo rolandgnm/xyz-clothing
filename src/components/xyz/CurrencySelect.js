@@ -10,6 +10,7 @@ const memoizedOptionsMap = memoizeOne(mapExchangeRatesToOptions);
 const SUICurrencySelect = ({ currency, onChange, exchangeRates }) => (
   <Dropdown
     inline
+    direction="left"
     options={memoizedOptionsMap(exchangeRates)}
     value={currency}
     onChange={(e, { value }) => onChange(value)}
