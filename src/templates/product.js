@@ -35,10 +35,7 @@ const ProductPage = ({ pageContext: { products, selectedId } }) => {
       <h3>Related</h3>
       <div>
         {relatedProducts.map(relatedProduct => (
-          <Fragment key={relatedProduct.id}>
-            <br />
-            <ProductSummary {...relatedProduct} />
-          </Fragment>
+          <ProductSummary key={relatedProduct.id} {...relatedProduct} />
         ))}
       </div>
     </Layout>

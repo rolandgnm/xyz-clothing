@@ -4,6 +4,8 @@ export const COLOR = {
   BLACK: '#000000',
   REBECCA_PURPLE: '#663399',
   BLUE: '#1a58cc',
+  TEXT_WEAK: 'rgba(0,0,0,.4)',
+  TEXT: 'rgba(0,0,0,.87)',
 };
 
 export const LAYOUT = {
