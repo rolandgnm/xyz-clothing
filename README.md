@@ -1,5 +1,9 @@
 # XYZ Clothing
 
+### View on Github Pages
+[https://rolandgnm.github.io/xyz-clothing/](https://rolandgnm.github.io/xyz-clothing/)
+
+### Run
 ```bash
 # install dependencies
 yarn
