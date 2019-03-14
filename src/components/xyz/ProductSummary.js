@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { Grid } from 'semantic-ui-react';
 import { Segment } from 'semantic-ui-react';
 import Price from './Price';
 import { COLOR } from '../../constants';
@@ -17,18 +16,35 @@ const ProductId = styled.div`
   color: ${COLOR.TEXT_WEAK};
 `;
 
-const ProductSummary = ({ id, name, price, fluid }) => (
+const FlexWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+`;
+
+const NameIdWrapper = styled.div`
+  flex: 2 0 260px;
+`;
+
+const FlexPrice = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+`;
+
+const ProductSummary = ({ id, name, price }) => (
   <Segment>
     <Link to={`/p/${id}`}>
-      <Grid verticalAlign="middle">
-        <Grid.Column floated="left" mobile={16} tablet={14} computer={14}>
+      <FlexWrapper>
+        <NameIdWrapper>
           <ProductName>{name}</ProductName>
           <ProductId>#{id}</ProductId>
-        </Grid.Column>
-        <Grid.Column floated="right" mobile={16} tablet={2} computer={2}>
+        </NameIdWrapper>
+        <FlexPrice>
           <Price {...price} />
-        </Grid.Column>
-      </Grid>
+        </FlexPrice>
+      </FlexWrapper>
     </Link>
   </Segment>
 );
